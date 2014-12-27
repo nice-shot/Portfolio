@@ -8,6 +8,7 @@
 
     <!-- bower:css -->
     <!-- endbower -->
+    <link rel="stylesheet" href="../src/css/animations.css" />
     <style>
     .jumbotron > h1 {
       text-align: center;
@@ -24,8 +25,12 @@
     <div class="container">
       <div class="jumbotron">
         <h1>{{fullname}}</h1>
-        <div class="row">
-          <div class="col-md-3"><h3>{{programming}}</h3></div>
+        <div class="row" id="interests">
+          <div class="col-md-3" id="programming">
+            <!-- Additional span so the cursor will be in the same row after
+                 type effect -->
+            <h3><span>{{programming}}</span></h3>
+          </div>
           <div class="col-md-3"><h3>{{design}}</h3></div>
           <div class="col-md-3"><h3>{{film}}</h3></div>
           <div class="col-md-3">
@@ -37,5 +42,11 @@
 
     <!-- bower:js -->
     <!-- endbower -->
+    <script src="../src/js/animations.js"></script>
+    <script>
+    $(document).ready(function() {
+        Effects.programmingTypeIn();
+    });
+    </script>
   </body>
 </html>

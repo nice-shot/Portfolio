@@ -6,6 +6,16 @@ module.exports = function(grunt) {
         src: ['build/*.html'],
       }
     },
+    watch: {
+      files: [
+        'Gruntfile.js',
+        'src/**',
+      ],
+      tasks: ['default'],
+    },
+    jshint: {
+      files: ['Gruntfile.js', 'src/js/*.js'],
+    },
     multi_language: {
       translate: {
         resources: 'src/lang/',
@@ -34,6 +44,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-wiredep');
   grunt.loadNpmTasks('grunt-multi-language');
   grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('default', ['multi_language', 'wiredep', 'replace']);
-}
+  grunt.registerTask('default', ['jshint', 'multi_language', 'wiredep', 'replace']);
+};
