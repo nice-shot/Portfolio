@@ -1,0 +1,6 @@
+/*
+Override the jumbotron to put my name in the middle
+*/
+.jumbotron > h1 {
+  text-align: center;
+}

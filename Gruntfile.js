@@ -38,7 +38,17 @@ module.exports = function(grunt) {
           }
         ]
       }
-    }
+    },
+    concat: {
+      buildJs: {
+        src: ['src/js/**/*.js'],
+        dest: 'build/main.js'
+      },
+      buildCss: {
+        src: ['src/css/**/*.css'],
+        dest: 'build/main.css'
+      }
+    },
   });
 
   grunt.loadNpmTasks('grunt-wiredep');
@@ -46,6 +56,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-text-replace');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', ['jshint', 'multi_language', 'wiredep', 'replace']);
+  grunt.registerTask('default', [
+    'jshint',
+    'multi_language',
+    'wiredep',
+    'replace',
+    'concat',
+  ]);
 };
