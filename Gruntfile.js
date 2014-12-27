@@ -21,6 +21,7 @@ module.exports = function(grunt) {
         src: ['build/*.en.html'],
         overwrite: true,
         replacements: [
+          // Remove bootstrap-rtl from english html files
           {
             from: /.*bootstrap-rtl\.css.*/,
             to: ''
