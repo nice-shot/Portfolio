@@ -1,6 +1,5 @@
 {
-  "name": "foundation-libsass-template",
+  "name": "MyPortfolio",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
   }
 }
