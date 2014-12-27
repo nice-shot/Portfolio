@@ -1,5 +1,15 @@
 {
   "name": "MyPortfolio",
   "dependencies": {
+    "bootstrap-rtl": "~3.2.0",
+    "bootstrap": "~3.3.1"
+  },
+  "overrides": {
+  	"bootstrap-rtl": {
+  		"dependencies": {
+  		    "jquery": ">= 1.9.0",
+  		    "bootstrap": "~3.3.1"
+  		}
+  	}
   }
 }
