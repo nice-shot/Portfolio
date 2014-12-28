@@ -35,20 +35,42 @@ module.exports = function(grunt) {
           {
             from: /.*bootstrap-rtl\.css.*/,
             to: ''
-          }
+          },
+        ]
+      },
+      mark_he: {
+        src: ['build/*.he.html'],
+        overwrite: true,
+        replacements: [
+          {
+            from: '<html lang="en">',
+            to: '<html lang="he">',
+          },
         ]
       }
     },
     concat: {
       buildJs: {
         src: ['src/js/**/*.js'],
-        dest: 'build/main.js'
+        dest: 'build/js/main.js'
       },
       buildCss: {
         src: ['src/css/**/*.css'],
-        dest: 'build/main.css'
+        dest: 'build/css/main.css'
       }
     },
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            src: ['src/assets/*'],
+            dest: 'build/assets',
+            flatten: true,
+          },
+        ]
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-wiredep');
@@ -57,6 +79,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', [
     'jshint',
@@ -64,5 +87,6 @@ module.exports = function(grunt) {
     'wiredep',
     'replace',
     'concat',
+    'copy',
   ]);
 };

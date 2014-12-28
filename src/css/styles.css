@@ -4,3 +4,55 @@ Override the jumbotron to put my name in the middle
 .jumbotron > h1 {
   text-align: center;
 }
+
+/*
+Custom fonts
+*/
+@font-face {
+  font-family: stranger;
+  src: url(../assets/stranger.ttf);
+/*  src: url(../assets/stranger_bold.ttf); */
+}
+
+@font-face {
+  font-family: shimshon;
+/*  src: url(../assets/shimshon_bold.ttf);*/
+  src: url(../assets/shimshon.ttf);
+}
+
+@font-face {
+  font-family: monacofnt;
+  src: url(../assets/monaco.ttf);
+}
+
+@font-face {
+  font-family: consolas;
+  src: url(../assets/consolas.ttf);
+}
+
+@font-face {
+  font-family: lcd_solid;
+  src: url(../assets/lcd_solid.ttf);
+}
+
+@font-face {
+  font-family: green_screen;
+  src: url(../assets/green_screen.ttf);
+}
+
+/* Change the programming title to a computer-esq font */
+#interests > #programming:lang(he) {
+  font-family: shimshon;
+}
+
+#interests > #programming:lang(en) {
+  font-family: green_screen;
+}
+
+/*
+The green-screen font looks bad on the cursor so we'll keep bootstrap's font
+*/
+.typed-cursor:lang(en) {
+  font-family: initial;
+}
+
