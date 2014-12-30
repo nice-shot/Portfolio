@@ -19,6 +19,11 @@ Custom fonts
   src: url(../assets/green_screen.ttf);
 }
 
+@font-face {
+  font-family: design_font;
+  src: url(../assets/cafe.ttf);
+}
+
 /* Change the programming title to a computer-esq font */
 #interests > #programming:lang(he) {
   font-family: shimshon;
@@ -35,3 +40,8 @@ The green-screen font looks bad on the cursor so we'll keep bootstrap's font
   font-family: initial;
 }
 
+#interests > #design > h3:lang(he) {
+  font-family: design_font;
+  font-size: 27px;
+  letter-spacing: 1.5px;
+}

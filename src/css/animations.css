@@ -22,3 +22,14 @@ Blinking cursor after programming interest field
   50% { opacity:0; }
   100% { opacity:1; }
 }
+
+/*
+Design write-on effect
+*/
+/* NOT WORKING YET...
+#interests > #design {
+  -webkit-mask-image: url(../assets/design_he_sprites.png);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-origin: padding, content;
+}
+*/
