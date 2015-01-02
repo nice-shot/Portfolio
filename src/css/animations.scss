@@ -28,7 +28,8 @@ Design write-on effect
 */
 
 
-@mixin design_write($letter_num, $y_pos, $time, $segments, $size, $delay) {
+@mixin design_write($letter_num, $y_pos, $time, $segments, $size, $delay,
+                    $x_offset: 0px) {
   /*
   Creates the animation css for a single letter
 
@@ -43,9 +44,9 @@ Design write-on effect
 
   #design-letter-#{$letter_num} {
     -webkit-mask-image: url(../assets/design_sprite_#{$letter_num}.png);
-    -webkit-mask-position-y: $y_pos; 
+    -webkit-mask-position-y: $y_pos;
     -webkit-mask-position-x: $size;
-    
+
     &.write {
       -webkit-animation: write-on-#{$letter_num} $time 1 {
         fill-mode: both;
@@ -54,7 +55,7 @@ Design write-on effect
     }
   }
 
-  @-webkit-keyframes write-on-#{$letter_num} { 
+  @-webkit-keyframes write-on-#{$letter_num} {
     $orig_frame_size: $size / $segments;
     $frame_size: 0px;
     $percent: 0%;
@@ -62,7 +63,7 @@ Design write-on effect
 
     @while $percent <= 100% {
       #{$percent + 0.001}, #{$percent + $percent_jump} {
-        -webkit-mask-position-x: #{$size - $frame_size};
+        -webkit-mask-position-x: #{$size - $frame_size - $x_offset};
       }
 
       $frame_size: $frame_size + $orig_frame_size;
@@ -75,7 +76,7 @@ Design write-on effect
 @include design_write(
   $letter_num: 5,
   $y_pos: 3px,
-  $time: 0.5s,
+  $time: 0.3s,
   $segments: 9,
   $size: 144px,
   $delay: 3s
@@ -88,4 +89,33 @@ Design write-on effect
   $segments: 4,
   $size: 32px,
   $delay: 2.7s
+);
+
+@include design_write(
+  $letter_num: 3,
+  $y_pos: -5px,
+  $time: 0.4s,
+  $segments: 11,
+  $size: 143px,
+  $delay: 2.2s
+);
+
+@include design_write(
+  $letter_num: 2,
+  $y_pos: 0px,
+  $x_offset: 2px,
+  $time: 0.1s,
+  $segments: 3,
+  $size: 18px,
+  $delay: 2.0s
+);
+
+@include design_write(
+  $letter_num: 1,
+  $y_pos: 0px,
+  $x_offset: -0.8px,
+  $time: 0.6s,
+  $segments: 9,
+  $size: 109px,
+  $delay: 1.3s
 );

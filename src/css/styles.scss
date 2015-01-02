@@ -5,6 +5,13 @@ Override the jumbotron to put my name in the middle
   text-align: center;
 }
 
+// Change the interests to be in the middle when on a small viewport
+#interests {
+  .col-sm-6 {
+    text-align: center;
+  }
+}
+
 /*
 Custom fonts
 */
