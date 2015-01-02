@@ -29,7 +29,7 @@ Design write-on effect
 
 
 @mixin design_write($letter_num, $y_pos, $time, $segments, $size, $delay,
-                    $x_offset: 0px) {
+                    $x_offset: 0px, $lang: "he") {
   /*
   Creates the animation css for a single letter
 
@@ -42,7 +42,7 @@ Design write-on effect
   - delay: How long to wait until the letter starts appearing
   */
 
-  #design-letter-#{$letter_num} {
+  #design-letter-#{$letter_num}:lang(#{$lang}) {
     -webkit-mask-image: url(../assets/design_sprite_#{$letter_num}.png);
     -webkit-mask-position-y: $y_pos;
     -webkit-mask-position-x: $size;
