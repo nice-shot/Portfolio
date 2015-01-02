@@ -26,10 +26,26 @@ Blinking cursor after programming interest field
 /*
 Design write-on effect
 */
-/* NOT WORKING YET...
-#interests > #design {
-  -webkit-mask-image: url(../assets/design_he_sprites.png);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-origin: padding, content;
+#design-letter-5 {
+  -webkit-mask-image: url(../assets/design_sprite_5.png);
+  -webkit-mask-position-y: 3px;
+  -webkit-mask-position-x: 144px;
 }
-*/
+
+#design-letter-5.write {
+  -webkit-animation: write-on-5 0.5s 1;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 3s;
+}
+
+@-webkit-keyframes write-on-5 {
+  0%, 1% { -webkit-mask-position-x: 144px; }
+  1.001%, 12.5% { -webkit-mask-position-x: 128px }
+  12.501%, 25% { -webkit-mask-position-x: 112px }
+  25.001%, 37.5% { -webkit-mask-position-x: 96px }
+  37.501%, 48% { -webkit-mask-position-x: 80px }
+  48.001%, 60.5% { -webkit-mask-position-x: 64px }
+  60.501%, 73% { -webkit-mask-position-x: 48px }
+  73.001%, 85.5% { -webkit-mask-position-x: 32px }
+  85.501%, 100% { -webkit-mask-position-x: 16px }
+}
