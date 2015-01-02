@@ -54,10 +54,6 @@ module.exports = function(grunt) {
         src: ['src/js/**/*.js'],
         dest: 'build/js/main.js'
       },
-      buildCss: {
-        src: ['src/css/**/*.css'],
-        dest: 'build/css/main.css'
-      }
     },
     copy: {
       main: {
@@ -70,6 +66,13 @@ module.exports = function(grunt) {
           },
         ]
       }
+    },
+    sass: {
+      buildCss: {
+        files: {
+          'build/css/main.css': 'src/css/main.scss',
+        }
+      }
     }
   });
 
@@ -80,6 +83,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   grunt.registerTask('default', [
     'jshint',
@@ -87,6 +91,7 @@ module.exports = function(grunt) {
     'wiredep',
     'replace',
     'concat',
+    'sass',
     'copy',
   ]);
 };
