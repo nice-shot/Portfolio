@@ -80,3 +80,12 @@ Design write-on effect
   $size: 144px,
   $delay: 3s
 );
+
+@include design_write(
+  $letter_num: 4,
+  $y_pos: 0px,
+  $time: 0.2s,
+  $segments: 4,
+  $size: 32px,
+  $delay: 2.7s
+);
