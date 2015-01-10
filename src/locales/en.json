@@ -10,5 +10,11 @@
   "sketches": "Sketches",
   "drawings": "Drawings",
   "games": "Games",
-  "works": "Works"
+  "works": "Works",
+  "_videos": {
+    "goodNeighbors": {
+      "title": "Good Neighbors",
+      "description": "My high school graduation film in Thelma Yellin High School of the Arts.\nMeir just wants to watch the game but his ever helpless neighbor and her son constantly harass him for small favors. How long can he endure their pestering?"
+    }
+  }
 }

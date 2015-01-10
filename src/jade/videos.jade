@@ -3,3 +3,9 @@ extends ./layout.jade
 block content
   h1= $in.videos
   div.row
+    div(class=["col-xs-3"])
+      img(src="../assets/poster-good_neighbors.jpg",
+          class="thumbnail img-responsive")
+    div.col-xs-7
+      h2= $in._videos.goodNeighbors.title
+      p= $in._videos.goodNeighbors.description
