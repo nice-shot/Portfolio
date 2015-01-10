@@ -13,3 +13,16 @@ block content
       +col("film", $in.film)
       +col("animation",
            $in.animation + " <small>" + $in.animationSecondary + "</small>")
+
+  div(class="row text-center")#works
+    h2= $in.works
+    mixin col(link, icon, title)
+      div(class="col-md-3 col-sm-6")
+        a.thumbnail(href=link + ".html")
+          - iconClass = ["fa", "fa-" + icon]
+          i(class=iconClass)
+          p= title
+    +col("videos", "film", $in.videos)
+    +col("sketches", "pencil", $in.sketches)
+    +col("games", "gamepad", $in.games)
+    +col("drawings", "photo", $in.drawings)

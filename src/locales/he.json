@@ -4,5 +4,11 @@
 	"animationSecondary": "בשאיפה",
 	"programming": "פיתוח תוכנה",
 	"design": "עיצוב",
-	"film": "קולנוע"
+	"film": "קולנוע",
+  "interests": "תחומי עניין",
+  "videos": "סרטים",
+  "sketches": "רישומים",
+  "drawings": "ציורים",
+  "games": "משחקים",
+  "works": "עבודות"
 }
