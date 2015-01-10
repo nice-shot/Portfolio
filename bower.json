@@ -3,7 +3,8 @@
   "dependencies": {
     "bootstrap-rtl": "~3.2.0",
     "bootstrap": "~3.3.1",
-    "typed.js": "*"
+    "typed.js": "*",
+    "components-font-awesome": "~4.2.0"
   },
   "overrides": {
     "bootstrap-rtl": {

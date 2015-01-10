@@ -5,12 +5,6 @@ Override the jumbotron to put my name in the middle
   text-align: center;
 }
 
-// Change the interests to be in the middle when on a small viewport
-#interests {
-  .col-sm-6 {
-    text-align: center;
-  }
-}
 
 /*
 Custom fonts
@@ -39,19 +33,44 @@ The green-screen font looks bad on the cursor so we'll keep bootstrap's font
 }
 
 
-//#interests {
-//  /* Change the programming title to a computer-esq font */
-//  #programming:lang(he) {
-//    font-family: shimshon;
-//  }
-//
-//  #programming:lang(en) {
-//    font-family: green_screen;
-//  }
-//
-//  #design > h3:lang(he) {
-//    font-family: design_font;
-//    font-size: 27px;
-//    letter-spacing: 1.5px;
-//  }
-//}
+#interests {
+  // Change the interests to be in the middle when on a small viewport
+  .col-sm-6 {
+    text-align: center;
+  }
+
+  ///* Change the programming title to a computer-esq font */
+  //#programming:lang(he) {
+  //  font-family: shimshon;
+  //}
+
+  //#programming:lang(en) {
+  //  font-family: green_screen;
+  //}
+
+  ///* Change desing font and size a bit
+  //#design > h3:lang(he) {
+  //  font-family: design_font;
+  //  font-size: 27px;
+  //  letter-spacing: 1.5px;
+  //}
+}
+
+// Icons
+#works {
+  font-size: 50px;
+
+  :hover {
+    color: #23527c;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  p {
+    font-size: 28px;
+  }
+}
+
