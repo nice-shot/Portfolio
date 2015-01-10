@@ -104,6 +104,20 @@ module.exports = function(grunt) {
       buildLangHtml: {
         src: ['build/*.he.html', 'build/*.en.html']
       }
+    },
+    jade: {
+      compile: {
+        options: {
+          pretty: true,
+          i18n: {
+            locales: 'src/locales/*.json',
+            namespace: '$in'
+          }
+        },
+        files: {
+          'build/index.html': 'src/jade/index.jade'
+        }
+      }
     }
   });
 
@@ -116,6 +130,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-jade-i18n');
 
   grunt.registerTask('default', [
     'jshint',
