@@ -1,5 +1,5 @@
 doctype html
-html(lang="#{$localeName}")
+html(lang=$localeName)
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -18,3 +18,6 @@ html(lang="#{$localeName}")
   body
     div(class="container")
       block content
+    // bower:js 
+    // endbower 
+    script(src="../js/main.js")
