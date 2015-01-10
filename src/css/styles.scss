@@ -64,6 +64,10 @@ The green-screen font looks bad on the cursor so we'll keep bootstrap's font
     color: #23527c;
   }
 
+  h2:hover {
+    color: inherit;
+  }
+
   a {
     text-decoration: none;
     color: black;

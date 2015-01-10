@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     wiredep: {
       task: {
-        src: ['build/*.html'],
+        src: ['build/**/*.html'],
       }
     },
     watch: {
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     },
     replace: {
       task: {
-        src: ['build/*.en.html'],
+        src: ['build/en/*.html'],
         overwrite: true,
         replacements: [
           // Remove bootstrap-rtl from english html files
@@ -65,6 +65,32 @@ module.exports = function(grunt) {
             flatten: true,
           },
         ]
+      },
+      heHtml: {
+        files: [
+          {
+            cwd: 'build',
+            src: ['**/*.he.html'],
+            dest: 'build/he/',
+            expand: true,
+            rename: function(dest, src) {
+              return dest + src.replace('.he', '');
+            }
+          }
+        ]
+      },
+      enHtml: {
+        files: [
+          {
+            cwd: 'build',
+            src: ['**/*.en.html'],
+            dest: 'build/en/',
+            expand: true,
+            rename: function(dest, src) {
+              return dest + src.replace('.en', '');
+            }
+          }
+        ]
       }
     },
     sass: {
@@ -72,6 +98,11 @@ module.exports = function(grunt) {
         files: {
           'build/css/main.css': 'src/css/main.scss',
         }
+      }
+    },
+    clean: {
+      buildLangHtml: {
+        src: ['build/*.he.html', 'build/*.en.html']
       }
     }
   });
@@ -84,14 +115,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.registerTask('default', [
     'jshint',
     'multi_language',
-    'wiredep',
-    'replace',
     'concat',
     'sass',
     'copy',
+    'clean',
+    'wiredep',
+    'replace',
   ]);
 };
