@@ -3,12 +3,18 @@ extends ./layout.jade
 block content
   h1= $in.videos
   div.row
-    div(class=["col-lg-3", "col-md-4", "col-sm-5", "col-xs-6"])
+    div(class=["col-md-4", "col-sm-5", "col-xs-12"])
       img(src="../assets/poster-good_neighbors.jpg",
           class="thumbnail img-responsive")
-    div(class=["col-lg-9", "col-md-8", "col-sm-7", "col-xs-6"])
+    div(class=["col-md-8", "col-sm-7", "col-xs-12"])
       h2= $in._videos.goodNeighbors.title
       p= $in._videos.goodNeighbors.description
-      button(class=["btn", "btn-default"])
+      button(class=["btn", "btn-default"], rel="E5VxobrYFdU")
         = " " + $in.watch + " "
         i(class=["fa", "fa-play-circle"])
+
+block pageJs
+  script.
+    $(function () {
+      $(".btn").YouTubeModal();
+    });

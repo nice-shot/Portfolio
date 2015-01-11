@@ -4,7 +4,8 @@
     "bootstrap-rtl": "~3.2.0",
     "bootstrap": "~3.3.1",
     "typed.js": "*",
-    "components-font-awesome": "~4.2.0"
+    "components-font-awesome": "~4.2.0",
+    "bootstrap-youtube": "*"
   },
   "overrides": {
     "bootstrap-rtl": {
@@ -12,6 +13,13 @@
         "jquery": ">= 1.9.0",
         "bootstrap": "~3.3.1"
       }
+    },
+    "bootstrap-youtube": {
+      "dependencies": {
+        "jquery": "*",
+        "bootstrap": "*"
+      },
+      "main": "bootstrap.youtubepopup.js"
     }
   }
 }
