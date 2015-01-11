@@ -9,12 +9,34 @@ block content
     div(class=["col-md-8", "col-sm-7", "col-xs-12"])
       h2= $in._videos.goodNeighbors.title
       p= $in._videos.goodNeighbors.description
-      button(class=["btn", "btn-default"], rel="E5VxobrYFdU")
+      button(class=["btn", "btn-default"],
+             data-toggle="modal",
+             data-target="#videoModal")
         = " " + $in.watch + " "
         i(class=["fa", "fa-play-circle"])
 
+  div(class="modal fade",
+      id="videoModal",
+      tabindex="-1",
+      role="dialog",
+      aria-labelledby="videoModalLabel",
+      aria-hidden="true")
+    div.modal-dialog
+      div.modal-content
+        div.modal-header
+          button.close(type="button",
+                       data-dismiss="modal",
+                       aria-label="Close")
+            span(aria-hidden="true")
+              &times;
+          h4.modal-title#videoModalLabel
+            = $in.watch
+        div.modal-body.
+          Hello again friend of a friend
+
+
 block pageJs
   script.
-    $(function () {
-      $(".btn").YouTubeModal();
-    });
+    //$(function () {
+    //  $(".btn").YouTubeModal();
+    //});
