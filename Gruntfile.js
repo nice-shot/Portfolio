@@ -3,7 +3,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     wiredep: {
       task: {
-        src: ['build/**/*.html'],
+        src: ['**/*.html'],
+        cwd: 'build',
       }
     },
     watch: {
@@ -40,10 +41,20 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            src: ['src/assets/*'],
+            src: ['src/assets/**'],
             dest: 'build/assets',
             flatten: true,
           },
+          {
+            expand: true,
+            src: ['bower_components/**'],
+            dest: 'build',
+          },
+          {
+            expand: true,
+            src: ['bower.json'],
+            dest: 'build'
+          }
         ]
       }
     },
