@@ -63,18 +63,25 @@ block content
 block pageJs
   script.
     $(function () {
+      $("#videoModal").on("show.bs.modal", function (event) {
+      });
       var modal = $("#videoModal")
       var modalEmbed = modal.find("div.embed-responsive")
       var modalFrame = modal.find("iframe");
       var modalTitle = modal.find("h4.modal-title");
       var urlStart = "http://www.youtube.com/embed/";
       var urlEnd = "?showinfo=0";
-      $('button[data-target="#videoModal"]').click(function (event) {
-        var videoId = $(this).attr("data-rel");
-        var videoName = $(this).parent().find("h2").text();
+      modal.on("show.bs.modal", function (event) {
+        var button = $(event.relatedTarget);
+        var videoId = button.data('rel');
+        var videoName = button.parent().find("h2").text();
         modalFrame.remove();
         modalFrame.attr("src", urlStart + videoId + urlEnd);
         modalEmbed.append(modalFrame);
         modalTitle.text(videoName);
+      });
+      modal.on("hide.bs.modal", function (event) {
+        console.log("stopping video");
+        modalFrame.remove();
       });
     });
