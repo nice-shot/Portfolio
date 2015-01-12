@@ -1,6 +1,9 @@
 extends ./layout.jade
 
 block content
+  ol.breadcrumb
+    li.active= $in.main
+
   div.jumbotron
     h1 #{$in.fullname}
     div.row#interests
