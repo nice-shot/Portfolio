@@ -31,8 +31,9 @@ block content
               &times;
           h4.modal-title#videoModalLabel
             = $in.watch
-        div.modal-body.
-          Hello again friend of a friend
+        div.modal-body
+          div(class="embed-responsive embed-responsive-16by9")
+            iframe.embed-responsive-item(src="http://www.youtube.com/embed/E5VxobrYFdU", allowfullscreen)
 
 
 block pageJs
