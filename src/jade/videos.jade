@@ -2,18 +2,37 @@ extends ./layout.jade
 
 block content
   h1= $in.videos
-  div.row
-    div(class=["col-md-4", "col-sm-5", "col-xs-12"])
-      img(src="../assets/poster-good_neighbors.jpg",
-          class="thumbnail img-responsive")
-    div(class=["col-md-8", "col-sm-7", "col-xs-12"])
-      h2= $in._videos.goodNeighbors.title
-      p= $in._videos.goodNeighbors.description
-      button(class=["btn", "btn-default"],
-             data-toggle="modal",
-             data-target="#videoModal")
-        = " " + $in.watch + " "
-        i(class=["fa", "fa-play-circle"])
+  mixin videoRow(posterImg, title, description, id)
+    div.row
+      div(class=["col-md-3", "col-sm-5", "col-xs-12"])
+        img(src="../assets/poster-" + posterImg + ".jpg",
+            class="thumbnail img-responsive")
+      div(class=["col-md-9", "col-sm-7", "col-xs-12"])
+        h2= title
+        p= description
+        button(class=["btn", "btn-default"],
+               data-toggle="modal",
+               data-target="#videoModal",
+               data-rel=id)
+          = " " + $in.watch + " "
+          i(class=["fa", "fa-play-circle"])
+
+  +videoRow("western_gate_v2",
+            $in._videos.screeningTrailer.title,
+            $in._videos.screeningTrailer.description,
+            "OkD6_Rf9LGw")
+  +videoRow("western_gate_v2",
+            $in._videos.westernGate.title,
+            $in._videos.westernGate.description,
+            "tCy77w1IBXI")
+  +videoRow("good_neighbors_v2",
+            $in._videos.goodNeighbors.title,
+            $in._videos.goodNeighbors.description,
+            "E5VxobrYFdU")
+  +videoRow("four_angles_v2",
+            $in._videos.fourAngles.title,
+            $in._videos.fourAngles.description,
+            "mao6P8tHPbE")
 
   div(class="modal fade",
       id="videoModal",
@@ -30,14 +49,28 @@ block content
             span(aria-hidden="true")
               &times;
           h4.modal-title#videoModalLabel
-            = $in.watch
         div.modal-body
           div(class="embed-responsive embed-responsive-16by9")
-            iframe.embed-responsive-item(src="http://www.youtube.com/embed/E5VxobrYFdU", allowfullscreen)
+            iframe(class="embed-responsive-item",
+                   src="http://www.youtube.com/embed/E5VxobrYFdU",
+                   allowfullscreen)
 
 
 block pageJs
   script.
-    //$(function () {
-    //  $(".btn").YouTubeModal();
-    //});
+    $(function () {
+      var modal = $("#videoModal")
+      var modalEmbed = modal.find("div.embed-responsive")
+      var modalFrame = modal.find("iframe");
+      var modalTitle = modal.find("h4.modal-title");
+      var urlStart = "http://www.youtube.com/embed/";
+      var urlEnd = "?showinfo=0";
+      $('button[data-target="#videoModal"]').click(function (event) {
+        var videoId = $(this).attr("data-rel");
+        var videoName = $(this).parent().find("h2").text();
+        modalFrame.remove();
+        modalFrame.attr("src", urlStart + videoId + urlEnd);
+        modalEmbed.append(modalFrame);
+        modalTitle.text(videoName);
+      });
+    });

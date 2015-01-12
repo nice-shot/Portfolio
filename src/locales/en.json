@@ -11,10 +11,23 @@
   "drawings": "Drawings",
   "games": "Games",
   "works": "Works",
+  "watch": "Watch",
   "_videos": {
     "goodNeighbors": {
       "title": "Good Neighbors",
       "description": "My high school graduation film in Thelma Yellin High School of the Arts.\nMeir just wants to watch the game but his ever helpless neighbor and her son constantly harass him for small favors. How long can he endure their pestering?"
+    },
+    "westernGate": {
+      "title": "Western Gate",
+      "description": "Tension grows high as a high school student tries to take on a gate mechanism and its operator.\nShort movie/clip that I made as a final project in 11th grade."
+    },
+    "fourAngles": {
+      "title": "Four Angles Excersize",
+      "description": "An incredibly weird short I've made during my second year in art school. I guess we had a task to film a short scene from four angles or something..."
+    },
+    "screeningTrailer": {
+      "title": "Screening Trailer",
+      "description": "A trailer I've made to our high school cinema major's finals movies screening. Thelma Yellin High School of the arts 2010."
     }
   }
 }
