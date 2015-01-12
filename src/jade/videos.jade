@@ -10,12 +10,14 @@ block content
       div(class=["col-md-9", "col-sm-7", "col-xs-12"])
         h2= title
         p= description
-        button(class=["btn", "btn-default"],
-               data-toggle="modal",
-               data-target="#videoModal",
-               data-rel=id)
-          = " " + $in.watch + " "
-          i(class=["fa", "fa-play-circle"])
+        div.row
+          div(class=["col-xs-12", "col-sm-1"])
+            button(class=["btn", "btn-default", "center-block"],
+                   data-toggle="modal",
+                   data-target="#videoModal",
+                   data-rel=id)
+              = " " + $in.watch + " "
+              i(class=["fa", "fa-play-circle"])
 
   +videoRow("screening_trailer_v2",
             $in._videos.screeningTrailer.title,
@@ -74,7 +76,7 @@ block pageJs
       modal.on("show.bs.modal", function (event) {
         var button = $(event.relatedTarget);
         var videoId = button.data('rel');
-        var videoName = button.parent().find("h2").text();
+        var videoName = button.parent().parent().parent().find("h2").text();
         modalFrame.remove();
         modalFrame.attr("src", urlStart + videoId + urlEnd);
         modalEmbed.append(modalFrame);
