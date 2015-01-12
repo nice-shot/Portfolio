@@ -81,7 +81,7 @@ block pageJs
       modal.on("show.bs.modal", function (event) {
         var button = $(event.relatedTarget);
         var videoId = button.data('rel');
-        var videoName = button.parent().parent().parent().find("h2").text();
+        var videoName = button.parent().parent().parent().find("h3").text();
         modalFrame.remove();
         modalFrame.attr("src", urlStart + videoId + urlEnd);
         modalEmbed.append(modalFrame);
