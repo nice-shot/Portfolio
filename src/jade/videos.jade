@@ -12,12 +12,12 @@ block content
         p= description
         div.row
           div(class=["col-xs-12", "col-sm-1"])
-            button(class=["btn", "btn-default", "center-block"],
+            button(class=["btn", "btn-default", "btn-primary", "center-block"],
                    data-toggle="modal",
                    data-target="#videoModal",
                    data-rel=id)
               = " " + $in.watch + " "
-              i(class=["fa", "fa-play-circle"])
+    hr.visible-xs-block
 
   +videoRow("screening_trailer_v2",
             $in._videos.screeningTrailer.title,
