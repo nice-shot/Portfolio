@@ -6,10 +6,35 @@ block nav_vars
 block content
   h1.text-center= $in.sketches
 
-  div.row.no-gutter
-    div.col-xs-12.col-md-8
-      img.img-responsive.center-block(src="../assets/sketches/yoav_roomate.jpg")
-    div.col-xs-12.col-md-4
-      img.img-responsive.center-block(src="../assets/sketches/tall_guy_using_laptop.jpg")
-    div.col-xs-12
-      img.img-responsive.center-block(src="../assets/sketches/covered_in_fabric_laying.jpg")
+  div.row
+    div#masonry_sketches
+      div.item
+        img(src="../assets/sketches/yoav_roomate.jpg")
+      div.item
+        img(src="../assets/sketches/tall_guy_using_laptop.jpg")
+      div.item
+        img(src="../assets/sketches/covered_in_fabric_laying.jpg")
+
+
+  //div.row.no-gutter
+  //  div.col-xs-12.col-md-8
+  //    img.img-responsive.center-block(src="../assets/sketches/yoav_roomate.jpg")
+  //  div.col-xs-12.col-md-4
+  //    div.row
+  //      div.col-xs-12
+  //        img.img-responsive.center-block(src="../assets/sketches/tall_guy_using_laptop.jpg")
+  //      div.col-xs-12
+  //        img.img-responsive.center-block(src="../assets/sketches/covered_in_fabric_laying.jpg")
+
+block pageJs
+  script.
+    $(function () {
+      var container = document.querySelector("#masonry_sketches");
+      var msnry;
+      imagesLoaded(container, function () {
+        msnry = new Masonry(container, {
+          itemSelector: ".item",
+          columnWidth: 400,
+        });
+      });
+    });
