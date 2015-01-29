@@ -5,3 +5,4 @@
 /build/*
 /other
 .sass-cache
+*.sublime-workspace
