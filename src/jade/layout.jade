@@ -17,6 +17,21 @@ html(lang=$localeName)
     // endbower 
     link(rel="stylesheet", href="../css/main.css")
   body
+    nav.navbar.navbar-default
+      block nav_vars
+        - var page = "index"
+      div.container
+        if $localeName === "he"
+          p.navbar-text.navbar-left
+            a.navbar-link(href="/en/" + page + ".html") English
+        else
+          p.navbar-text.navbar-right
+            a.navbar-link(href="/he/" + page + ".html")= $in.hebrew
+
+        p.navbar-text
+          a.navbar-link(href="index.html")= $in.main
+          
+
     div(class="container")
       block content
     // bower:js 

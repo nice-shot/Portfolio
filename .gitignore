@@ -6,3 +6,4 @@
 /other
 .sass-cache
 *.sublime-workspace
+.sublime-grunt.cache

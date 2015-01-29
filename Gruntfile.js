@@ -77,6 +77,7 @@ module.exports = function(grunt) {
         files: {
           'build/index.html': 'src/jade/index.jade',
           'build/videos.html': 'src/jade/videos.jade',
+          'build/sketches.html': 'src/jade/sketches.jade',
         }
       }
     }
