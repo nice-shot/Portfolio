@@ -23,10 +23,10 @@ html(lang=$localeName)
       div.container
         if $localeName === "he"
           p.navbar-text.navbar-left
-            a.navbar-link(href="/en/" + page + ".html") English
+            a.navbar-link(href="../en/" + page + ".html") English
         else
           p.navbar-text.navbar-right
-            a.navbar-link(href="/he/" + page + ".html")= $in.hebrew
+            a.navbar-link(href="../he/" + page + ".html")= $in.hebrew
 
         p.navbar-text
           a.navbar-link(href="index.html")= $in.main
