@@ -1,8 +1,6 @@
 *.DS_Store
 /css/*
-/bower_components/*
 /node_modules/*
-/build/*
 /other
 .sass-cache
 *.sublime-workspace

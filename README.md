@@ -1,2 +1,0 @@
-Nadav Sheffer's Portfolio
-=========================

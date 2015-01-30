@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Nadav Sheffer - Portfolio</title>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!-- [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]
+    
+    -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.css" />
+    <link rel="stylesheet" href="../bower_components/components-font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <p class="navbar-text navbar-left"><a href="/en/drawings.html" class="navbar-link">English</a></p>
+        <p class="navbar-text"><a href="index.html" class="navbar-link">ראשי</a></p>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="text-center">ציורים ועיצובים</h1>
+      <div class="row">
+        <div id="drawings-carousel" data-ride="carousel" data-interval="" class="carousel slide"> 
+          <!-- Content-->
+          <div role="listbox" class="carousel-inner">
+                        <div data-title="ללא כותרת" data-desc="ציור קטן שעשיתי במסגרת גלריה שפתחנו ביחידה הצבאית שלי" class="item active"><img src="../assets/drawings/eyes_invite_drawing.jpg" class="img-responsive"></div>
+                        <div data-title="האבולוציה של איש הקולנוע" data-desc="פלייר שהכנתי עבור ערב הקרנות סרטי כיתה ט' בתיכון" class="item"><img src="../assets/drawings/movie_man_evolution.jpg" class="img-responsive"></div>
+                        <div data-title="לוגו מדורי" data-desc="לוגו שהכנתי למדור שלי בצבא. הייתי צריך לשלב בז, יד, גלובוס וחנית" class="item"><img src="../assets/drawings/mador_logo.jpg" class="img-responsive"></div>
+                        <div data-title="דיוקן עצמי בסגנון קומיקס" data-desc="ניסוי שעשיתי בציור על גבי תמונה ואפקטים בפוטושופ" class="item"><img src="../assets/drawings/self_portrait_reaching_hand.jpg" class="img-responsive"></div>
+          </div>
+          <!-- Controls--><a role="button" data-slide="prev" href="#drawings-carousel" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a role="button" data-slide="next" href="#drawings-carousel" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
+        </div>
+      </div>
+      <div id="picture-desc" class="row text-center">
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/typed.js/js/typed.js"></script>
+    <script src="../bower_components/get-style-property/get-style-property.js"></script>
+    <script src="../bower_components/get-size/get-size.js"></script>
+    <script src="../bower_components/eventie/eventie.js"></script>
+    <script src="../bower_components/doc-ready/doc-ready.js"></script>
+    <script src="../bower_components/eventEmitter/EventEmitter.js"></script>
+    <script src="../bower_components/matches-selector/matches-selector.js"></script>
+    <script src="../bower_components/outlayer/item.js"></script>
+    <script src="../bower_components/outlayer/outlayer.js"></script>
+    <script src="../bower_components/masonry/masonry.js"></script>
+    <script src="../bower_components/imagesloaded/imagesloaded.js"></script>
+    <!-- endbower -->
+    <script src="../js/main.js"></script>
+    <script>
+      $(function () {
+        var pictureDesc = $("#picture-desc");
+      
+        function updateDescription(item) {
+          pictureDesc.find("h2").text(item.data("title"));
+          pictureDesc.find("p").text(item.data("desc"));
+        }
+      
+        // Add data for the first element
+        updateDescription($(".item.active"));
+      
+        $("#drawings-carousel").on("slide.bs.carousel", function (event) {
+          updateDescription($(event.relatedTarget));
+        });
+      });
+    </script>
+  </body>
+</html>
