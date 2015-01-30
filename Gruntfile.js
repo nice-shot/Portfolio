@@ -79,6 +79,7 @@ module.exports = function(grunt) {
           'build/index.html': 'src/jade/index.jade',
           'build/videos.html': 'src/jade/videos.jade',
           'build/sketches.html': 'src/jade/sketches.jade',
+          'build/drawings.html': 'src/jade/drawings.jade',
         }
       }
     }
