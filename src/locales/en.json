@@ -8,12 +8,13 @@
   "interests": "Interests",
   "videos": "Videos",
   "sketches": "Sketches",
-  "drawings": "Drawings",
+  "drawings": "Drawings and Designs",
   "games": "Games",
   "works": "Works",
   "watch": "Watch",
   "main": "Main",
   "hebrew": "עברית",
+  "untitled": "Untitled",
   "_videos": {
     "goodNeighbors": {
       "title": "Good Neighbors",
@@ -34,6 +35,16 @@
     "dontPirate": {
       "title": "Stop Game Pirating",
       "description": "A PSA I've created for a citizenship class project. All of the data here is complitely made up and should not be taken seriously."
+    }
+  },
+  "_drawings": {
+    "eyes_invite_drawing": {
+      "title": "",
+      "description": "A small drawing I did for a gallary that we've opened in my unit"
+    },
+    "movie_man_evolution": {
+      "title": "Movie Man Evolution",
+      "description": "A flyer I've made to hour first year cinema major screening"
     }
   }
 }
