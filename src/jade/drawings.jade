@@ -8,19 +8,21 @@ block content
 
   div.row
     div.col-xs-12
-      div#drawings-carousel.carousel.slide(data-ride="carousel")
-        // Indicators
-        //ol.carousel-indicators
-        //  li(data-target="#drawings-carousel" data-slide-to="0" class="active")
-        //  li(data-target="#drawings-carousel" data-slide-to="1")
-        //  li(data-target="#drawings-carousel" data-slide-to="2")
-    
+      div#drawings-carousel.carousel.slide(data-ride="carousel")  
         // Content
         div.carousel-inner(role="listbox")
-          div.item.active
-            img.img-responsive(src="../assets/drawings/eyes_invite_drawing.jpg")
-          div.item
-            img.img-responsive(src="../assets/drawings/movie_man_evolution.jpg")
+          mixin Item(picture, active)
+            if active
+              - var classes = ["item", "active"]
+            else
+              - var classes = ["item"]
+            div(class=classes)
+              img.img-responsive(src="../assets/drawings/" + picture + ".jpg")
+
+          +Item("eyes_invite_drawing", true)
+          +Item("movie_man_evolution")
+          +Item("mador_logo")
+          +Item("self_portrait_reaching_hand")
 
         // Controls
         a.left.carousel-control(role="button", data-slide="prev",
