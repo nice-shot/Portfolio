@@ -196,11 +196,13 @@
 
                         // start typing each new char into existing string
                         // curString: arg, self.el.html: original text inside element
-                        var nextString = self.elContent + curString.substr(0, curStrPos + 1);
+                        var nextString = curString.substr(0, curStrPos + 1);
                         if (self.attr) {
                             self.el.attr(self.attr, nextString);
                         } else {
-                            if (self.contentType === 'html') {
+                            if (self.isInput) {
+                                self.el.val(nextString);
+                            } else if (self.contentType === 'html') {
                                 self.el.html(nextString);
                             } else {
                                 self.el.text(nextString);
@@ -262,11 +264,13 @@
 
                 // ----- continue important stuff ----- //
                 // replace text with base text + typed characters
-                var nextString = self.elContent + curString.substr(0, curStrPos);
+                var nextString = curString.substr(0, curStrPos);
                 if (self.attr) {
                     self.el.attr(self.attr, nextString);
                 } else {
-                    if (self.contentType === 'html') {
+                    if (self.isInput) {
+                        self.el.val(nextString);
+                    } else if (self.contentType === 'html') {
                         self.el.html(nextString);
                     } else {
                         self.el.text(nextString);
@@ -324,7 +328,9 @@
             var id = this.el.attr('id');
             this.el.after('<span id="' + id + '"/>')
             this.el.remove();
-            this.cursor.remove();
+            if (typeof this.cursor !== 'undefined') {
+                this.cursor.remove();
+            }
             // Send the callback
             self.options.resetCallback();
         }
