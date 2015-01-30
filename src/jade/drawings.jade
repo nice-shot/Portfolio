@@ -5,3 +5,29 @@ block nav_vars
 
 block content
   h1.text-center= $in.drawings
+
+  div.row
+    div.col-xs-12
+      div#drawings-carousel.carousel.slide(data-ride="carousel")
+        // Indicators
+        //ol.carousel-indicators
+        //  li(data-target="#drawings-carousel" data-slide-to="0" class="active")
+        //  li(data-target="#drawings-carousel" data-slide-to="1")
+        //  li(data-target="#drawings-carousel" data-slide-to="2")
+    
+        // Content
+        div.carousel-inner(role="listbox")
+          div.item.active
+            img.img-responsive(src="../assets/drawings/eyes_invite_drawing.jpg")
+          div.item
+            img.img-responsive(src="../assets/drawings/movie_man_evolution.jpg")
+
+        // Controls
+        a.left.carousel-control(role="button", data-slide="prev",
+                                href="#drawings-carousel")
+          span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+          span.sr-only Previous
+        a.right.carousel-control(role="button", data-slide="next",
+                                href="#drawings-carousel")
+          span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+          span.sr-only Next

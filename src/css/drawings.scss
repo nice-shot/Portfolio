@@ -1,0 +1,8 @@
+.carousel-inner {
+	> div.item {
+		> img {
+			margin: 0 auto;
+			height: inherit;
+		}
+	}
+}
