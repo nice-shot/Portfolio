@@ -44,7 +44,7 @@
     },
     "movie_man_evolution": {
       "title": "Movie Man Evolution",
-      "description": "A flyer I've made to hour first year cinema major screening"
+      "description": "Flyer for our first year cinema major screening"
     },
     "mador_logo": {
       "title": "Department Logo",
@@ -81,6 +81,10 @@
     "vector_portrait": {
       "title": "",
       "description": "Self-portrait in vector graphics"
+    },
+    "docu_screening": {
+      "title": "Docu Screening",
+      "description": "Flyer for our third year cinema major documentary shorts screening"
     }
   }
 }
