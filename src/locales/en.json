@@ -65,6 +65,18 @@
     "ecamp_countdown": {
       "title": "eCamp Countdown",
       "description": "An image I've made for a countdown leading to the eCamp opening. Was scrapped because the violent content was inappropriate in a family friendly summer camp."
+    },
+    "hogger_logo": {
+      "title": "Hogger Logo",
+      "description": "A logo I've made for a programing framework we've developed in my unit"
+    },
+    "yoram_shirt": {
+      "title": "",
+      "description": "Shirt design for a school trip. Stars the head of my school's cinema major - Yoram Shapira"
+    },
+    "ladders_new_year": {
+      "title": "Happy New Year from Team Ladders",
+      "description": "Happy New Year card starring my first team in the army"
     }
   }
 }
