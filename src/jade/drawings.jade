@@ -7,8 +7,8 @@ block content
   h1.text-center= $in.drawings
 
   div.row
-    div#drawings-carousel.carousel.slide(data-ride="carousel",
-                                         data-interval="")  
+    div#drawings-carousel.carousel.slide.center-block(data-ride="carousel",
+                                                      data-interval="")  
       // Content
       div.carousel-inner(role="listbox")
         mixin Item(picture, active)
@@ -26,6 +26,8 @@ block content
         +Item("mador_logo")
         +Item("self_portrait_reaching_hand")
         +Item("ecamp_shirt")
+        +Item("green_alien_dude")
+        +Item("ecamp_countdown")
 
       // Controls
       a.left.carousel-control(role="button", data-slide="prev",

@@ -81,6 +81,14 @@ module.exports = function(grunt) {
           'build/sketches.html': 'src/jade/sketches.jade',
           'build/drawings.html': 'src/jade/drawings.jade',
         }
+      },
+      referrer: {
+        options: {
+          pretty: true
+        },
+        files: {
+          'build/index.html': 'src/jade/referrer.jade',
+        }
       }
     }
   });
