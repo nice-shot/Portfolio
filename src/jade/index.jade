@@ -2,7 +2,9 @@ extends ./layout.jade
 
 block content
   div.jumbotron
-    h1 #{$in.fullname}
+    h1.text-center= $in.fullname
+    h2.text-center
+      small= $in.aspiring_animator
     //div.row#interests
       mixin col(id, title)
         div(class="col-md-3 col-sm-6", id=id)
