@@ -22,10 +22,10 @@ html(lang=$localeName)
         - var page = "index"
       div.container
         if $localeName === "he"
-          p.navbar-text.navbar-left
+          p.navbar-text.pull-left
             a.navbar-link(href="../en/" + page + ".html") English
         else
-          p.navbar-text.navbar-right
+          p.navbar-text.pull-right
             a.navbar-link(href="../he/" + page + ".html")= $in.hebrew
 
         p.navbar-text
