@@ -29,3 +29,8 @@ block content
 
   div#about.row
     h2.text-center= $in.about_me
+    p
+      img.img-responsive.thumbnail(src="../assets/about_portrait.jpg")
+    for paragraph in $in.about_me_text.split("\n")
+      =paragraph
+      br
