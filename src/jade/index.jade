@@ -3,7 +3,7 @@ extends ./layout.jade
 block content
   div.jumbotron
     h1 #{$in.fullname}
-    div.row#interests
+    //div.row#interests
       mixin col(id, title)
         div(class="col-md-3 col-sm-6", id=id)
           h3!= title
@@ -14,7 +14,7 @@ block content
       +col("animation",
            $in.animation + " <small>" + $in.animationSecondary + "</small>")
 
-  div(class="row text-center")#works
+  div#works.row.text-center
     h2= $in.works
     mixin col(link, icon, title)
       div(class="col-md-3 col-sm-6")
@@ -26,3 +26,6 @@ block content
     +col("sketches", "pencil", $in.sketches)
     +col("games", "gamepad", $in.games)
     +col("drawings", "photo", $in.drawings)
+
+  div#about.row
+    h2.text-center= $in.about_me
