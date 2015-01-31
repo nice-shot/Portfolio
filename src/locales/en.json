@@ -85,6 +85,14 @@
     "docu_screening": {
       "title": "Docu Screening",
       "description": "Flyer for our third year cinema major documentary shorts screening"
+    },
+    "blue_poster": {
+      "title": "Blue Poster",
+      "description": "A few expirements with vector graphics"
+    },
+    "pixel_portrait": {
+      "title": "Pixel Portrait",
+      "description": "Self-portrait using pixel art"
     }
   }
 }

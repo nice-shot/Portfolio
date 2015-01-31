@@ -85,6 +85,14 @@
     "docu_screening": {
       "title": "ערב הקרנות שביעיסטים - סרטים תיעודיים",
       "description": "פלייר לערב הקרנות כיתה י\"א לסרטים תיעודיים"
+    },
+    "blue_poster": {
+      "title": "פוסטר כחול",
+      "description": "כמה ניסויים שעשיתי עם גרפיקת וקטור"
+    },
+    "pixel_portrait": {
+      "title": "פורטרט מפוקסל",
+      "description": "דיוקן עצמי בסגנון pixel-art"
     }
   }
 }
