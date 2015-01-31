@@ -30,20 +30,18 @@
     <div class="container">
       <div class="jumbotron">
         <h1>נדב שפר</h1>
-        <div id="interests" class="row">
-                    <div id="programming" class="col-md-3 col-sm-6">
-                      <h3><span>פיתוח תוכנה</span></h3>
-                    </div>
-                    <div id="design" class="col-md-3 col-sm-6">
-                      <h3>עיצוב</h3>
-                    </div>
-                    <div id="film" class="col-md-3 col-sm-6">
-                      <h3>קולנוע</h3>
-                    </div>
-                    <div id="animation" class="col-md-3 col-sm-6">
-                      <h3>אנימציה <small>בשאיפה</small></h3>
-                    </div>
-        </div>
+        <!--div.row#interests
+        mixin col(id, title)
+          div(class="col-md-3 col-sm-6", id=id)
+            h3!= title
+        
+        +col("programming", "<span>" + $in.programming + "</span>")
+        +col("design", $in.design)
+        +col("film", $in.film)
+        +col("animation",
+             $in.animation + " <small>" + $in.animationSecondary + "</small>")
+        
+        -->
       </div>
       <div id="works" class="row text-center">
         <h2>עבודות</h2>
@@ -55,6 +53,14 @@
                     <p>משחקים</p></a></div>
                 <div class="col-md-3 col-sm-6"><a href="drawings.html" class="thumbnail"><i class="fa fa-photo"></i>
                     <p>ציורים ועיצובים</p></a></div>
+      </div>
+      <div id="about" class="row">
+        <h2 class="text-center">קצת עלי</h2><img src="../assets/about_portrait.jpg" class="img-responsive thumbnail">
+        <p>בכיתה ט' עברתי ללמוד בתיכון לאומנויות תלמה ילין בגבעתיים. שם נחשפתי לעולם הקולנוע והאומנות בכלל ועם הזמן זה הפך לחלק משמעותי מחיי. במסגרת הלימודים יצא לי לכתוב, לביים, להפיק ולערוך סרטים. בנוסף התנסיתי בעיצוב גרפי ובציור עם פוטושופ. אחרי הלימודים עבדתי תקופה קצרה כמדריך במחנה קיץ &quot;eCamp&quot; שבו העברתי קורס של ציור קומיקס דיגיטלי וקורס אפקטים בתוכנה Adobe After Effects.</p>
+        <p>בצבא עברתי קורס שחקים-אח&quot;מ והגעתי לחיל המודיעין. במהלך השירות בעיקר יצא לי להתעסק במחשבים ותחומים טכנולוגיים אחרים אך עדיין מצאתי הזדמנויות לנצל את כישורי האומנויות שלמדתי בתיכון. כיום אני עובד בחברת הייטק בשם Fabrix Systems שעוסקת במערכות וידאו לחברות כבלים.</p>
+        <p>בין השאר יצא לי לעבוד על משחקי מחשב, ללמוד רישום אצל יוסי אבולפיה, ולעסוק בכמה עבודות עריכה ועיצוב פה ושם.</p>
+        <p>אני מעריץ גדול של עולם האנימציה, בין אם מדובר בסרטים באורך מלא, סדרות או סרטים קצרים, וברצוני ללמוד ובהמשך לעבוד בתחום הזה. אשמח אם תקבלו אותי למוסד שלכם :)</p>
+        <p></p>
       </div>
     </div>
     <!-- bower:js -->

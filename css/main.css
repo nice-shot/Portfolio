@@ -38,6 +38,11 @@ The green-screen font looks bad on the cursor so we'll keep bootstrap's font
   #works p {
     font-size: 28px; }
 
+#about > img {
+  float: left;
+  max-width: 140px;
+  margin-right: 3px; }
+
 /*
 Blinking cursor after programming interest field
 */
@@ -262,6 +267,9 @@ Design write-on effect
 .no-gutter > [class*="col-"] {
   padding-right: 0;
   padding-left: 0; }
+
+.carousel {
+  max-width: 1024px; }
 
 .carousel-inner > div.item > img {
   margin: 0 auto;

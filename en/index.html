@@ -30,20 +30,18 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Nadav Sheffer</h1>
-        <div id="interests" class="row">
-                    <div id="programming" class="col-md-3 col-sm-6">
-                      <h3><span>Programming</span></h3>
-                    </div>
-                    <div id="design" class="col-md-3 col-sm-6">
-                      <h3>Design</h3>
-                    </div>
-                    <div id="film" class="col-md-3 col-sm-6">
-                      <h3>Film</h3>
-                    </div>
-                    <div id="animation" class="col-md-3 col-sm-6">
-                      <h3>Animation <small>Aspiring</small></h3>
-                    </div>
-        </div>
+        <!--div.row#interests
+        mixin col(id, title)
+          div(class="col-md-3 col-sm-6", id=id)
+            h3!= title
+        
+        +col("programming", "<span>" + $in.programming + "</span>")
+        +col("design", $in.design)
+        +col("film", $in.film)
+        +col("animation",
+             $in.animation + " <small>" + $in.animationSecondary + "</small>")
+        
+        -->
       </div>
       <div id="works" class="row text-center">
         <h2>Works</h2>
@@ -55,6 +53,10 @@
                     <p>Games</p></a></div>
                 <div class="col-md-3 col-sm-6"><a href="drawings.html" class="thumbnail"><i class="fa fa-photo"></i>
                     <p>Drawings and Designs</p></a></div>
+      </div>
+      <div id="about" class="row">
+        <h2 class="text-center">A little about me</h2><img src="../assets/about_portrait.jpg" class="img-responsive thumbnail">
+        <p>Bla bla bla bla</p>
       </div>
     </div>
     <!-- bower:js -->
