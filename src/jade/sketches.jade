@@ -1,15 +1,50 @@
 extends ./layout.jade
 
 block nav_vars
-  - var page = "sketches"
+    - var page = "sketches"
 
 block content
-  h1.text-center= $in.sketches
+    h1.text-center= $in.sketches
 
-  div.row.no-gutter
-    div.col-xs-12.col-md-8
-      img.img-responsive.center-block(src="../assets/sketches/yoav_roomate.jpg")
-    div.col-xs-12.col-md-4
-      img.img-responsive.center-block(src="../assets/sketches/tall_guy_using_laptop.jpg")
-    div.col-xs-12
-      img.img-responsive.center-block(src="../assets/sketches/covered_in_fabric_laying.jpg")
+    div#sketch-grid
+        div.brick
+            img(src="file:///home/shendy/Pictures/sketches/sketches/IMG_1256.JPG")
+        div.brick
+            img(src="file:///home/shendy/Pictures/sketches/sketches/IMG_1261_rot.JPG")
+        div.brick
+            img(src="file:///home/shendy/Pictures/sketches/sketches/IMG_1270_rot.JPG")
+        div.brick
+            img(src="file:///home/shendy/Pictures/sketches/sketches/IMG_1275_rot.JPG")
+        div.brick
+            img(src="file:///home/shendy/Pictures/sketches/sketches/IMG_1280.JPG")
+        div.brick
+            img(src="file:///home/shendy/Pictures/sketches/sketches/IMG_1282.JPG")
+        div.brick
+            img(src="file:///home/shendy/Pictures/sketches/sketches/IMG_1439_rot.JPG")
+
+
+    //- div.row.no-gutter
+    //-     div.col-xs-12.col-md-8
+    //-         img.img-responsive.center-block(src="../assets/sketches/yoav_roomate.jpg")
+    //-     div.col-xs-12.col-md-4
+    //-         img.img-responsive.center-block(src="../assets/sketches/tall_guy_using_laptop.jpg")
+    //-     div.col-xs-12
+    //-         img.img-responsive.center-block(src="../assets/sketches/covered_in_fabric_laying.jpg")
+
+block pageJs
+    script.
+        $(function () {
+            var wall = new freewall("#sketch-grid")
+            wall.reset({
+                selector: ".brick",
+                animate: true,
+                onResize: function () {
+                    wall.fitWidth();
+                },
+            })
+
+            var images = wall.container.find(".brick");
+            images.find('img').load(function () {
+                wall.fitWidth();
+            });
+        });
