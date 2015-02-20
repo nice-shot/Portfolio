@@ -7,23 +7,39 @@ block content
     h1.text-center= $in.sketches
 
     div#sketch-grid.free-wall
+        mixin brick(name)
+            div.brick
+                img(src="../assets/sketches/" + name + ".jpg")
+
+        +brick("AirConditionairRemoteSmall")
+        +brick("BottleHolderSmall")
+        +brick("BurlesqueGirlSmall")
+        +brick("DadDrinkingSmall")
+        +brick("GuyWithHatUsingComputerSmall")
+        +brick("NakedWomanPointingSmall")
+        +brick("SoniaCouchSmall")
+        +brick("WomanCoolPoseArmsDownSmall")
+        +brick("WomanHoldingHandUpSmall")
+        +brick("WomanHoldingVaseSmall")
+        +brick("WristWatchSmall")
+
         //- - for (var i=1; i < 5; i++)
         //-     div.brick
         //-         img(src="../assets/sketches/" + i + ".jpg")
-        div.brick
-            img(src="../assets/sketches/IMG_1261_rot.JPG")
-        div.brick
-            img(src="../assets/sketches/IMG_1256.JPG")
-        div.brick
-            img(src="../assets/sketches/IMG_1270_rot.JPG")
-        div.brick
-            img(src="../assets/sketches/IMG_1275_rot.JPG")
-        div.brick
-            img(src="../assets/sketches/IMG_1280.JPG")
-        div.brick
-            img(src="../assets/sketches/IMG_1282.JPG")
-        div.brick
-            img(src="../assets/sketches/IMG_1439_rot.JPG")
+        //- div.brick
+        //-     img(src="../assets/sketches/IMG_1261_rot.JPG")
+        //- div.brick
+        //-     img(src="../assets/sketches/IMG_1256.JPG")
+        //- div.brick
+        //-     img(src="../assets/sketches/IMG_1270_rot.JPG")
+        //- div.brick
+        //-     img(src="../assets/sketches/IMG_1275_rot.JPG")
+        //- div.brick
+        //-     img(src="../assets/sketches/IMG_1280.JPG")
+        //- div.brick
+        //-     img(src="../assets/sketches/IMG_1282.JPG")
+        //- div.brick
+        //-     img(src="../assets/sketches/IMG_1439_rot.JPG")
 
 block pageJs
     script.
