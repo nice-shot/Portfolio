@@ -6,6 +6,8 @@ block nav_vars
 block content
     h1.text-center= $in.sketches
 
+    div#size-check.hidden-xs
+
     div#sketch-grid.free-wall
         mixin brick(name, size)
             - size = size || "Small";
@@ -24,7 +26,7 @@ block content
         +brick("WomanHoldingVase")
         +brick("WristWatch")
 
-    div(class="modal fade",
+    div(class="modal fade hidden-xs",
         id="sketchModal",
         tabindex="-1",
         role="dialog",
@@ -32,12 +34,6 @@ block content
         aria-hidden="true")
         div.modal-dialog
             div.modal-content
-                //- div.modal-header
-                    //- button.close(type="button",
-                               //- data-dismiss="modal",
-                               //- aria-label="Close")
-                    //- span(aria-hidden="true")
-                      //- &times;
                 div.modal-body
                     img.img-responsive.center-block
 
@@ -68,10 +64,13 @@ block pageJs
             }
 
             createWall();
+            var sizeCheck = $("#size-check");
             $("#sketch-grid img").click(function (event) {
                 var modal = $("#sketchModal");
                 var imageURL = this.src.replace("Small", "Medium");
-                modal.find(".modal-body > img").attr("src", imageURL);
-                modal.modal();
+                if (sizeCheck.is(":visible")) {
+                    modal.find(".modal-body > img").attr("src", imageURL);
+                    modal.modal();
+                }
             });
         });
