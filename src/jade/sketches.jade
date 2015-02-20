@@ -9,12 +9,12 @@ block content
     div#sketch-grid.free-wall
         mixin brick(name)
             div.brick
-                img(src="../assets/sketches/" + name + ".jpg")
+                img(id=name, src="../assets/sketches/" + name + ".jpg")
 
-        +brick("AirConditionairRemoteSmall")
+        +brick("DadDrinkingSmall")
         +brick("BottleHolderSmall")
         +brick("BurlesqueGirlSmall")
-        +brick("DadDrinkingSmall")
+        +brick("AirConditionairRemoteSmall")
         +brick("GuyWithHatUsingComputerSmall")
         +brick("NakedWomanPointingSmall")
         +brick("SoniaCouchSmall")
@@ -23,27 +23,9 @@ block content
         +brick("WomanHoldingVaseSmall")
         +brick("WristWatchSmall")
 
-        //- - for (var i=1; i < 5; i++)
-        //-     div.brick
-        //-         img(src="../assets/sketches/" + i + ".jpg")
-        //- div.brick
-        //-     img(src="../assets/sketches/IMG_1261_rot.JPG")
-        //- div.brick
-        //-     img(src="../assets/sketches/IMG_1256.JPG")
-        //- div.brick
-        //-     img(src="../assets/sketches/IMG_1270_rot.JPG")
-        //- div.brick
-        //-     img(src="../assets/sketches/IMG_1275_rot.JPG")
-        //- div.brick
-        //-     img(src="../assets/sketches/IMG_1280.JPG")
-        //- div.brick
-        //-     img(src="../assets/sketches/IMG_1282.JPG")
-        //- div.brick
-        //-     img(src="../assets/sketches/IMG_1439_rot.JPG")
-
 block pageJs
     script.
-        $(function () {
+        function createWall() {
             var wall = new freewall("#sketch-grid")
             wall.reset({
                 selector: ".brick",
@@ -52,7 +34,6 @@ block pageJs
                     wall.fitWidth();
                 },
                 cellW: function (width) {
-                    console.log("got width: " + width)
                     var cellWidth = width / 3;
                     return cellWidth - 20;
                 },
@@ -64,4 +45,9 @@ block pageJs
                 console.log("image: " + this.src + "was loaded");
                 wall.fitWidth();
             });
+            return wall;
+        }
+
+        $(function () {
+            createWall();
         });
