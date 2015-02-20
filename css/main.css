@@ -1,10 +1,4 @@
 /*
-Override the jumbotron to put my name in the middle
-*/
-.jumbotron > h1 {
-  text-align: center; }
-
-/*
 Custom fonts
 */
 @font-face {
@@ -264,9 +258,15 @@ Design write-on effect
     -webkit-mask-position-x: 25.02222px; }
   88.88989%, 100.0% {
     -webkit-mask-position-x: 12.91111px; } }
-.no-gutter > [class*="col-"] {
-  padding-right: 0;
-  padding-left: 0; }
+.brick {
+  width: 450px; }
+
+.brick img {
+  width: 100%;
+  height: auto; }
+
+#sketchModal .modal-content {
+  background-color: black; }
 
 .carousel {
   max-width: 1024px; }
