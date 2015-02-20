@@ -7,47 +7,71 @@ block content
     h1.text-center= $in.sketches
 
     div#sketch-grid.free-wall
-        mixin brick(name)
+        mixin brick(name, size)
+            - size = size || "Small";
             div.brick
-                img(id=name, src="../assets/sketches/" + name + ".jpg")
+                img(id=name, src="../assets/sketches/" + name + size + ".jpg")
 
-        +brick("DadDrinkingSmall")
-        +brick("BottleHolderSmall")
-        +brick("BurlesqueGirlSmall")
-        +brick("AirConditionairRemoteSmall")
-        +brick("GuyWithHatUsingComputerSmall")
-        +brick("NakedWomanPointingSmall")
-        +brick("SoniaCouchSmall")
-        +brick("WomanCoolPoseArmsDownSmall")
-        +brick("WomanHoldingHandUpSmall")
-        +brick("WomanHoldingVaseSmall")
-        +brick("WristWatchSmall")
+        +brick("DadDrinking")
+        +brick("BottleHolder")
+        +brick("BurlesqueGirl")
+        +brick("AirConditionairRemote")
+        +brick("GuyWithHatUsingComputer")
+        +brick("NakedWomanPointing")
+        +brick("SoniaCouch")
+        +brick("WomanCoolPoseArmsDown")
+        +brick("WomanHoldingHandUp")
+        +brick("WomanHoldingVase")
+        +brick("WristWatch")
+
+    div(class="modal fade",
+        id="sketchModal",
+        tabindex="-1",
+        role="dialog",
+        //- aria-labelledby="videoModalLabel",
+        aria-hidden="true")
+        div.modal-dialog
+            div.modal-content
+                //- div.modal-header
+                    //- button.close(type="button",
+                               //- data-dismiss="modal",
+                               //- aria-label="Close")
+                    //- span(aria-hidden="true")
+                      //- &times;
+                div.modal-body
+                    img.img-responsive.center-block
 
 block pageJs
     script.
-        function createWall() {
-            var wall = new freewall("#sketch-grid")
-            wall.reset({
-                selector: ".brick",
-                animate: true,
-                onResize: function () {
-                    wall.fitWidth();
-                },
-                cellW: function (width) {
-                    var cellWidth = width / 3;
-                    return cellWidth - 20;
-                },
-                cellH: "auto",
-            })
-
-            var images = wall.container.find(".brick");
-            images.find('img').load(function () {
-                console.log("image: " + this.src + "was loaded");
-                wall.fitWidth();
-            });
-            return wall;
-        }
-
         $(function () {
+            function createWall() {
+                var wall = new freewall("#sketch-grid")
+                wall.reset({
+                    selector: ".brick",
+                    animate: true,
+                    onResize: function () {
+                        wall.fitWidth();
+                    },
+                    cellW: function (width) {
+                        var cellWidth = width / 3;
+                        return cellWidth - 20;
+                    },
+                    cellH: "auto",
+                })
+
+                var images = wall.container.find(".brick");
+                images.find('img').load(function () {
+                    console.log("image: " + this.src + "was loaded");
+                    wall.fitWidth();
+                });
+                return wall;
+            }
+
             createWall();
+            $("#sketch-grid img").click(function (event) {
+                var modal = $("#sketchModal");
+                var imageURL = this.src.replace("Small", "Medium");
+                modal.find(".modal-body > img").attr("src", imageURL);
+                modal.modal();
+            });
         });
