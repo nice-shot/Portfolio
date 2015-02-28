@@ -35,10 +35,16 @@ The green-screen font looks bad on the cursor so we'll keep bootstrap's font
 #about > img {
   float: left;
   max-width: 140px;
-  margin-right: 3px; }
-
+  margin-bottom: 0px;
+  margin-right: 3px;
+  margin-left: 15px; }
 #about > img:lang(en) {
-  float: right; }
+  float: right;
+  margin-right: 15px;
+  margin-left: 3px; }
+#about p {
+  padding-right: 15px;
+  padding-left: 15px; }
 
 /*
 Blinking cursor after programming interest field
