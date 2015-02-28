@@ -8,7 +8,7 @@ block content
 
   div.row
     div#drawings-carousel.carousel.slide.center-block(data-ride="carousel",
-                                                      data-interval="")  
+                                                      data-interval="")
       // Content
       div.carousel-inner(role="listbox")
         mixin Item(picture, active)
@@ -22,19 +22,19 @@ block content
             img.img-responsive(src="../assets/drawings/" + picture + ".jpg")
 
         +Item("eyes_invite_drawing", true)
-        +Item("movie_man_evolution")
         +Item("mador_logo")
-        +Item("self_portrait_reaching_hand")
-        +Item("ecamp_shirt")
-        +Item("green_alien_dude")
-        +Item("ecamp_countdown")
         +Item("hogger_logo")
-        +Item("yoram_shirt")
         +Item("ladders_new_year")
+        +Item("self_portrait_reaching_hand")
         +Item("vector_portrait")
-        +Item("docu_screening")
-        +Item("blue_poster")
         +Item("pixel_portrait")
+        +Item("movie_man_evolution")
+        +Item("docu_screening")
+        +Item("yoram_shirt")
+        +Item("ecamp_shirt")
+        +Item("ecamp_countdown")
+        +Item("blue_poster")
+        +Item("green_alien_dude")
 
       // Controls
       a.left.carousel-control(role="button", data-slide="prev",
@@ -46,8 +46,8 @@ block content
         span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
         span.sr-only Next
   div#picture-desc.row.text-center
-    h2
-    p
+    //- h2
+    h3
 
 block pageJs
   script.
@@ -56,7 +56,7 @@ block pageJs
 
       function updateDescription(item) {
         pictureDesc.find("h2").text(item.data("title"));
-        pictureDesc.find("p").text(item.data("desc"));
+        pictureDesc.find("h3").text(item.data("desc"));
       }
 
       // Add data for the first element
