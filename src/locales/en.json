@@ -16,8 +16,6 @@
     "main": "Main",
     "hebrew": "עברית",
     "untitled": "Untitled",
-    "about_me": "A little about me",
-    "about_me_text": "Bla bla bla bla",
     "_videos": {
         "goodNeighbors": {
             "title": "Good Neighbors",
@@ -107,5 +105,7 @@
             "title": "Generation Catch",
             "description": "A game I've worked on as a graphic designer in the Global Game Jam competition. An international game development competition where we had to make a game in two days. This game works using a web cam. One player stands in front of the camera trying to hit targets while another player sees a video of him and chooses where to place the targets."
         }
-    }
+    },
+    "about_me": "A little about me",
+    "about_me_text": "Bla bla bla bla"
 }
