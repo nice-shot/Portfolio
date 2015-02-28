@@ -1,101 +1,111 @@
 {
 	"fullname": "Nadav Sheffer",
-  "aspiring_animator": "Future Animation Student",
+    "aspiring_animator": "Future Animation Student",
 	"animation": "Animation",
 	"animationSecondary": "Aspiring",
 	"programming": "Programming",
 	"design": "Design",
 	"film": "Film",
-  "interests": "Interests",
-  "videos": "Videos",
-  "sketches": "Sketches",
-  "drawings": "Drawings and Designs",
-  "games": "Games",
-  "works": "Works",
-  "watch": "Watch",
-  "main": "Main",
-  "hebrew": "עברית",
-  "untitled": "Untitled",
-  "about_me": "A little about me",
-  "about_me_text": "Bla bla bla bla",
-  "_videos": {
-    "goodNeighbors": {
-      "title": "Good Neighbors",
-      "description": "My high school graduation film in Thelma Yellin High School of the Arts.\nMeir just wants to watch the game but his ever helpless neighbor and her son constantly harass him for small favors. How long can he endure their pestering?"
+    "interests": "Interests",
+    "videos": "Videos",
+    "sketches": "Sketches",
+    "drawings": "Drawings and Designs",
+    "games": "Games",
+    "works": "Works",
+    "watch": "Watch",
+    "main": "Main",
+    "hebrew": "עברית",
+    "untitled": "Untitled",
+    "about_me": "A little about me",
+    "about_me_text": "Bla bla bla bla",
+    "_videos": {
+        "goodNeighbors": {
+            "title": "Good Neighbors",
+            "description": "My high school graduation film in Thelma Yellin High School of the Arts.\nMeir just wants to watch the game but his ever helpless neighbor and her son constantly harass him for small favors. How long can he endure their pestering?"
+        },
+        "westernGate": {
+            "title": "Western Gate",
+            "description": "Tension grows high as a high school student tries to take on a gate mechanism and its operator.\nShort movie/clip that I made as a final project in 11th grade."
+        },
+        "fourAngles": {
+            "title": "Four Angles Excersize",
+            "description": "An incredibly weird short I've made during my second year in art school. I guess we had a task to film a short scene from four angles or something..."
+        },
+        "screeningTrailer": {
+            "title": "Screening Trailer",
+            "description": "A trailer I've made to our high school cinema major's finals movies screening. Thelma Yellin High School of the arts 2010."
+        },
+        "dontPirate": {
+            "title": "Stop Game Pirating",
+            "description": "A PSA I've created for a citizenship class project. All of the data here is complitely made up and should not be taken seriously."
+        }
     },
-    "westernGate": {
-      "title": "Western Gate",
-      "description": "Tension grows high as a high school student tries to take on a gate mechanism and its operator.\nShort movie/clip that I made as a final project in 11th grade."
+    "_drawings": {
+        "eyes_invite_drawing": {
+            "title": "",
+            "description": "A small drawing I did for a gallary that we've opened in my unit"
+        },
+        "movie_man_evolution": {
+            "title": "Movie Man Evolution",
+            "description": "Flyer for our first year cinema major screening"
+        },
+        "mador_logo": {
+            "title": "Department Logo",
+            "description": "A logo I've made for my department in the army. I needed to combine a falcon, hand, globe and a spear"
+        },
+        "self_portrait_reaching_hand": {
+            "title": "Comic Style Self-portrait",
+            "description": "An expirement I did with rotoscoping and Photoshop effects"
+        },
+        "ecamp_shirt": {
+            "title": "eCamp Shirt Design",
+            "description": "A design I've made with Yuval Pnueli for eCamp summer camp"
+        },
+        "green_alien_dude": {
+            "title": "Green Alien Dude",
+            "description": "A little character I've made while playing with Photoshop"
+        },
+        "ecamp_countdown": {
+            "title": "eCamp Countdown",
+            "description": "An image I've made for a countdown leading to the eCamp opening. Was scrapped because the violent content was inappropriate in a family friendly summer camp."
+        },
+        "hogger_logo": {
+            "title": "Hogger Logo",
+            "description": "A logo I've made for a programing framework we've developed in my unit"
+        },
+        "yoram_shirt": {
+            "title": "",
+            "description": "Shirt design for a school trip. Stars the head of my school's cinema major - Yoram Shapira"
+        },
+        "ladders_new_year": {
+            "title": "Happy New Year from Team Ladders",
+            "description": "Happy New Year card starring my first team in the army"
+        },
+        "vector_portrait": {
+            "title": "",
+            "description": "Self-portrait in vector graphics"
+        },
+        "docu_screening": {
+            "title": "Docu Screening",
+            "description": "Flyer for our third year cinema major documentary shorts screening"
+        },
+        "blue_poster": {
+            "title": "Blue Poster",
+            "description": "A few expirements with vector graphics"
+        },
+        "pixel_portrait": {
+            "title": "Pixel Portrait",
+            "description": "Self-portrait using pixel art"
+        }
     },
-    "fourAngles": {
-      "title": "Four Angles Excersize",
-      "description": "An incredibly weird short I've made during my second year in art school. I guess we had a task to film a short scene from four angles or something..."
-    },
-    "screeningTrailer": {
-      "title": "Screening Trailer",
-      "description": "A trailer I've made to our high school cinema major's finals movies screening. Thelma Yellin High School of the arts 2010."
-    },
-    "dontPirate": {
-      "title": "Stop Game Pirating",
-      "description": "A PSA I've created for a citizenship class project. All of the data here is complitely made up and should not be taken seriously."
+    "_games":{
+        "votingGame": {
+            "title": "Ultimate Election",
+            "description": "A one button game a friend and I made for the upcoming elections. In the game you choose a party name (doesn't have to be a real party) and you start voting for it. Votes from all the players are updated in real-time and it becomes a competition to see who can win the most votes before the election date."
+        },
+        "generationCatch": {
+            "title": "Generation Catch",
+            "description": "A game I've worked on as a graphic designer in the Global Game Jam competition. An international game development competition where we had to make a game in two days. This game works using a web cam. One player stands in front of the camera trying to hit targets while another player sees a video of him and chooses where to place the targets."
+        }
     }
-  },
-  "_drawings": {
-    "eyes_invite_drawing": {
-      "title": "",
-      "description": "A small drawing I did for a gallary that we've opened in my unit"
-    },
-    "movie_man_evolution": {
-      "title": "Movie Man Evolution",
-      "description": "Flyer for our first year cinema major screening"
-    },
-    "mador_logo": {
-      "title": "Department Logo",
-      "description": "A logo I've made for my department in the army. I needed to combine a falcon, hand, globe and a spear"
-    },
-    "self_portrait_reaching_hand": {
-      "title": "Comic Style Self-portrait",
-      "description": "An expirement I did with rotoscoping and Photoshop effects"
-    },
-    "ecamp_shirt": {
-      "title": "eCamp Shirt Design",
-      "description": "A design I've made with Yuval Pnueli for eCamp summer camp"
-    },
-    "green_alien_dude": {
-      "title": "Green Alien Dude",
-      "description": "A little character I've made while playing with Photoshop"
-    },
-    "ecamp_countdown": {
-      "title": "eCamp Countdown",
-      "description": "An image I've made for a countdown leading to the eCamp opening. Was scrapped because the violent content was inappropriate in a family friendly summer camp."
-    },
-    "hogger_logo": {
-      "title": "Hogger Logo",
-      "description": "A logo I've made for a programing framework we've developed in my unit"
-    },
-    "yoram_shirt": {
-      "title": "",
-      "description": "Shirt design for a school trip. Stars the head of my school's cinema major - Yoram Shapira"
-    },
-    "ladders_new_year": {
-      "title": "Happy New Year from Team Ladders",
-      "description": "Happy New Year card starring my first team in the army"
-    },
-    "vector_portrait": {
-      "title": "",
-      "description": "Self-portrait in vector graphics"
-    },
-    "docu_screening": {
-      "title": "Docu Screening",
-      "description": "Flyer for our third year cinema major documentary shorts screening"
-    },
-    "blue_poster": {
-      "title": "Blue Poster",
-      "description": "A few expirements with vector graphics"
-    },
-    "pixel_portrait": {
-      "title": "Pixel Portrait",
-      "description": "Self-portrait using pixel art"
-    }
-  }
 }

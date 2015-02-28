@@ -1,0 +1,24 @@
+extends ./layout.jade
+
+block nav_vars
+    - var page = "games"
+
+block content
+    h1.text-center= $in.games
+
+    div.row
+        div.col-md-3.col-sm-5.col-xs-12
+            img.img-responsive.thumbnail.center-block(src="../assets/game-ultimate_vote.jpg")
+        div.col-md-9.col-sm-7.col-xs-12
+            h3= $in._games.votingGame.title
+            p= $in._games.votingGame.description
+            p
+                a(href="http://ultimate-vote.co.il") ultimate-vote.co.il
+    div.row
+        div.col-md-3.col-sm-5.col-xs-12
+            img.img-responsive.thumbnail.center-block(src="../assets/game-generation_catch.png")
+        div.col-md-9.col-sm-7.col-xs-12
+            h3= $in._games.generationCatch.title
+            p= $in._games.generationCatch.description
+            p
+                a(href="http://globalgamejam.org/2014/games/generation-catch") globalgamejam.org/2014/games/generation-catch
