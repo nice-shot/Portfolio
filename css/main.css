@@ -24,18 +24,21 @@ The green-screen font looks bad on the cursor so we'll keep bootstrap's font
   font-size: 50px; }
   #works :hover {
     color: #23527c; }
-  #works h2:hover {
-    color: inherit; }
   #works a {
     text-decoration: none;
     color: black; }
   #works p {
     font-size: 28px; }
+  #works p:lang(en) {
+    font-size: 24px; }
 
 #about > img {
   float: left;
   max-width: 140px;
   margin-right: 3px; }
+
+#about > img:lang(en) {
+  float: right; }
 
 /*
 Blinking cursor after programming interest field
