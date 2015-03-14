@@ -1,4 +1,4 @@
-{
+﻿{
 	"fullname": "Nadav Sheffer",
     "aspiring_animator": "Future Animation Student",
 	"animation": "Animation",
@@ -31,7 +31,7 @@
         },
         "screeningTrailer": {
             "title": "Screening Trailer",
-            "description": "A trailer I've made to our high school cinema major's finals movies screening. Thelma Yellin High School of the arts 2010."
+            "description": "Trailer to our high school cinema major's finals movies screening. Thelma Yellin High School of the arts 2010."
         },
         "dontPirate": {
             "title": "Stop Game Pirating",
@@ -41,7 +41,7 @@
     "_drawings": {
         "eyes_invite_drawing": {
             "title": "",
-            "description": "A drawing I did for a gallary we've opened in my unit"
+            "description": "Drawing for a gallary we've opened in my unit"
         },
         "movie_man_evolution": {
             "title": "Movie Man Evolution",
@@ -49,15 +49,15 @@
         },
         "mador_logo": {
             "title": "Department Logo",
-            "description": "A logo I've made for my department in the army. I needed to combine a falcon, hand, globe and a spear"
+            "description": "Logo for my department in the army. I needed to combine a falcon, hand, globe and a spear"
         },
         "self_portrait_reaching_hand": {
             "title": "Comic Style Self-portrait",
-            "description": "An expirement I did with rotoscoping and Photoshop effects"
+            "description": "Comic book style self-portrait. Rotoscoping and Photoshop effects"
         },
         "ecamp_shirt": {
             "title": "eCamp Shirt Design",
-            "description": "A shirt design I've made with with a friend for eCamp summer camp"
+            "description": "Shirt design for eCamp summer camp"
         },
         "green_alien_dude": {
             "title": "Green Alien Dude",
@@ -65,11 +65,11 @@
         },
         "ecamp_countdown": {
             "title": "eCamp Countdown",
-            "description": "An image I've made for a countdown leading to the eCamp opening. Was scrapped because the violent content was inappropriate in a family friendly summer camp."
+            "description": "Countdown leading to the eCamp opening. Was scrapped because the violent content was inappropriate in a family friendly summer camp."
         },
         "hogger_logo": {
             "title": "Hogger Logo",
-            "description": "A logo I've made for a programing framework we've developed in my unit"
+            "description": "Logo for a programing framework we've developed in my unit"
         },
         "yoram_shirt": {
             "title": "",
@@ -89,7 +89,7 @@
         },
         "blue_poster": {
             "title": "Blue Poster",
-            "description": "A few expirements with vector graphics"
+            "description": "Expiremental drawing with vector graphics"
         },
         "pixel_portrait": {
             "title": "Pixel Portrait",
@@ -107,5 +107,5 @@
         }
     },
     "about_me": "A little about me",
-    "about_me_text": "I was born and rised in Netanya, Israel. In 9th grade I transferred schools to Thelma Yellin High School of the Arts in Givataayim. There I was exposed to the world of Cinema and Art and with time it became a major part of my life. During school I've tried my hand in writing, directing, produceding and editing short films. Additionally I've had some experience with graphic design and drawing in photoshop. After school I've worked for a while in \"eCamp\" summer camp where I taught a course about digital comics and special effects with Adobe After Effects.\nIn the army I went through the \"Ahm-Schakim\" course and arrived at the Intelligence corps. In my service I've worked mainly with computers and other technological fields but I could still find some chances to use the artistic skills I've learned in high school. Today I am working in \"Fabrix Systems\", a high-tech company that creates video systems for cable companies.\nAmong other things, I've worked on video games, learned figure drawing from former Bezalel animation department head, Yossi Abolafia, and made some editing and design works here and there.\nI'm a big fan of the world of animation, whether it's full feature films, tv shows or short films, and I'd like to learn and work in this field. I'd be happy to learn in your institute."
+    "about_me_text": "I was born and rised in Netanya, Israel. In 9th grade I transferred schools to Thelma Yellin High School of the Arts in Givataayim. There I was exposed to the world of Cinema and Art and with time it became a major part of my life. During school I've tried my hand in writing, directing, produceding and editing short films. Additionally I've had some experience with graphic design and drawing in photoshop. After school I've worked for a while in \"eCamp\" summer camp where I taught a course about digital comics and special effects with Adobe After Effects.\nIn the army I went through the \"Ahm-Schakim\" course and arrived at the Intelligence corps. In my service I've worked mainly with computers and other technological fields but I could still find some chances to use the artistic skills I've learned in high school. Today I am working in \"Fabrix Systems\", a high-tech company that creates video systems for cable companies.\nAmong other things, I've worked on video games, learned figure drawing from former Bezalel animation department head, Yossi Abolafia, and made some editing and design works.\nI'm a big fan of the world of animation, whether it's full feature films, tv shows or short films, and I'd like to learn and work in this field. I'd be happy to learn in your institute."
 }
