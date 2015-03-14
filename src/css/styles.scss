@@ -48,6 +48,10 @@ The green-screen font looks bad on the cursor so we'll keep bootstrap's font
   //}
 }
 
+.jumbotron {
+  padding-bottom: 0;
+}
+
 // Icons
 #works {
   font-size: 50px;
