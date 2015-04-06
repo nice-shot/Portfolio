@@ -287,4 +287,8 @@ Design write-on effect
   margin: 0 auto;
   height: inherit; }
 
+.carousel-control {
+  background-image: none !important;
+  color: black !important; }
+
 /*# sourceMappingURL=main.css.map */
